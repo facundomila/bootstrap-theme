@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CONFIG -->
+    <title>Panel de control</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP REQUIRES -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="../bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- SITE STYLE -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Conect to Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+    <script src="firebase.js"></script>
+    <script src="autenticacion.js"></script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div id="login" class="container text-center">
+    <h1>Panel de control</h1>
+    <h4>Ingresa tu e-mail y contraseña para ingresar</h4>
+    <form class="form-inline">
+        <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
+        <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
+        <div id="result"></div><button id="create-user" onclick="createUser()">Registrate</button>
+        <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
+    </form>
+</div>
+
+<div id="user-info" class="container text-center">
+        <p id="user-name"></p>
+        <button onclick="logout()">Cerrar sesion <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        </button>
+</div>
+
+<div id="cpanel" class="container">
+     <h2>Panel de control</h2>
+     <p>Modifica los campos que deseas atualizar. Para confirmar la operacion presiona el boton "Actualizar".</p>
+        <hr>
+        <form class="form-inline">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Titulo</h5>
+                    <input id="title" class="form-control" size="30" placeholder="titulo" required>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Subitulo</h5>
+                    <input id="subtitle" class="form-control" size="30" placeholder="Password" required>
+                </div>
+            </div>
+            <hr>
+            <div id="resultado"></div>
+            <button type="button" onclick="updateContent()" class="btn btn-danger">Actualizar</button>
+        </form>
+</div>
+
+<footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Bienvenido al panel de control de <a href="" title="Visit w3schools">www.tu-sitio.com</a></p>
+</footer>
+
+</body>
+</html>
