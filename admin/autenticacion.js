@@ -6,6 +6,8 @@ auth.onAuthStateChanged(function(user) {
       $("#login").hide();
       $("#user-state").show();
       $("#cpanel").show();
+      $('#alert').show();
+      $('#alert').html(user.email);
   } else {
       $("#login").show();
       $("#user-state").hide();

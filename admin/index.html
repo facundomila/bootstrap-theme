@@ -35,7 +35,6 @@
 <div id="alert" style="background-color: #269abc;width: 100%; height: 45px"></div>
 
 <div id="user-state" class="container text-center">
-    <p id="user-name"></p>
     <button onclick="logout()">Cerrar sesion <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     </button>
 </div>
@@ -46,7 +45,7 @@
     <form class="form-inline">
         <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
         <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
-        <button id="create-user" onclick="showRegUser()">Crear Usuario</button>
+        <button type="button" class="btn btn-danger" onclick="showRegUser()">Crear Usuario</button>
         <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
     </form>
 </div>
