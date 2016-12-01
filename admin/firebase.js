@@ -1,12 +1,3 @@
-var config = {
-    apiKey: "AIzaSyDLxlsP9XGpnbwzQ2AbTfEG_IPq1fMrKYA",
-    authDomain: "hello-world-614c2.firebaseapp.com",
-    databaseURL: "https://hello-world-614c2.firebaseio.com",
-    storageBucket: "hello-world-614c2.appspot.com",
-    messagingSenderId: "348530014620"
-};
-firebase.initializeApp(config);
-
 var db = firebase.database();
 
 var title;
@@ -37,4 +28,3 @@ function updateContent() {
 
     $('#resultado').html('<span style="color:green;">Bien atualizado pipi</span>')
 }
-

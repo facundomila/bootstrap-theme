@@ -15,11 +15,30 @@
     <link rel="stylesheet" href="../css/style.css">
     <!--Conect to Firebase-->
     <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
-    <script src="firebase.js"></script>
+    <script>
+
+        var config = {
+            apiKey: "AIzaSyDLxlsP9XGpnbwzQ2AbTfEG_IPq1fMrKYA",
+            authDomain: "hello-world-614c2.firebaseapp.com",
+            databaseURL: "https://hello-world-614c2.firebaseio.com",
+            storageBucket: "hello-world-614c2.appspot.com",
+            messagingSenderId: "348530014620"
+        };
+
+        firebase.initializeApp(config);
+
+    </script>
     <script src="autenticacion.js"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div id="alert" style="background-color: #269abc;width: 100%; height: 45px"></div>
+
+<div id="user-state" class="container text-center">
+    <p id="user-name"></p>
+    <button onclick="logout()">Cerrar sesion <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    </button>
+</div>
 
 <div id="login" class="container text-center">
     <h1>Panel de control</h1>
@@ -27,15 +46,19 @@
     <form class="form-inline">
         <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
         <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
-        <div id="result"></div><button id="create-user" onclick="createUser()">Registrate</button>
+        <button id="create-user" onclick="showRegUser()">Crear Usuario</button>
         <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
     </form>
 </div>
 
-<div id="user-info" class="container text-center">
-        <p id="user-name"></p>
-        <button onclick="logout()">Cerrar sesion <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-        </button>
+<div id="create-user" class="container text-center">
+    <h1>Registrate</h1>
+    <h4>Ingresa tu e-mail y contraseña para Registrate</h4>
+    <form class="form-inline">
+        <input id="newEmailVal" type="email" class="form-control" size="30" placeholder="Email" required>
+        <input id="newPassVal" type="password" class="form-control" size="30" placeholder="Password" required>
+        <button id="create-user" onclick="createUser()">Registrate</button>
+    </form>
 </div>
 
 <div id="cpanel" class="container">
@@ -66,5 +89,6 @@
     <p>Bienvenido al panel de control de <a href="" title="Visit w3schools">www.tu-sitio.com</a></p>
 </footer>
 
+<script src="firebase.js"></script>
 </body>
 </html>

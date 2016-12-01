@@ -1,41 +1,47 @@
+var auth = firebase.auth();
+
 //LOGIN
-firebase.auth().onAuthStateChanged(function(user) {
+auth.onAuthStateChanged(function(user) {
   if (user) {
       $("#login").hide();
-      $("#user-info").show();
+      $("#user-state").show();
       $("#cpanel").show();
   } else {
       $("#login").show();
-      $("#user-info").hide();
+      $("#user-state").hide();
   }
 });
 
 function login() {
   var email = $("#emailVal").val();
   var password = $("#passVal").val();
-  firebase.auth().signInWithEmailAndPassword(email, password)
+    auth.signInWithEmailAndPassword(email, password)
           .catch(function() {
-          $("#result").val('no existe');
+          $('#alert').html('<span style="color:red;">Incorrecto</span>');
           $("#create-user").show();
   });
 }
 
+function showRegUser() {
+    $("#create-user").show();
+}
+
 function createUser() {
-  var email = $("#emailVal").val();
-  var password = $("#passVal").val();
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  var email = $("#newEmailVal").val();
+  var password = $("#newPassVal").val();
+    auth.createUserWithEmailAndPassword(email, password)
         .catch(function() {
-          $("#result").val('vuelva a intentarlo');
+          $('#alert').html("comela");
 });
 }
 
 function logout() {
   firebase.auth().signOut().then(function() {
-      alert("La sesion ha sido cerrada.");
+      $('#alert').html("sesion cerrrada");
       $("#cpanel").hide();
-      $("#user-info").hide();
+      $("#user-state").hide();
       $("#login").show();
 }, function(error) {
-      alert("Ha ocurrido un error. Por favor vuelva a intentarlo.");
+      $('#alert').html("vuelva a intentarlo");
 });
 }
