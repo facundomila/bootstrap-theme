@@ -1,21 +1,21 @@
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.4;
-    color: #1b6d85;
 }
 h2 {
     font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
     font-weight: 600;
-    margin-bottom: 30px;
+    text-align: center;
 }
-h4 {
+h3 {
     font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 10px;
+}
+.body-clean-style {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#075794), to(#00273B));
+    color: #FFFFFF;
 }
 .jumbotron {
     background-color: #f4511e;
@@ -176,18 +176,14 @@ footer .glyphicon {
     }
 }
 
-#alert {
+#user-login {
     display: none;
-}
-#cpanel {
-    display: none;
-}
-#create-user {
-    display: none;
+    padding-bottom: 15px;
 }
 #user-state {
-    width: 100%;
-    height: 50px;
-    background-color: #099833;
     display: none;
+}
+
+#create-user, #cpanel, {
+display: none;
 }

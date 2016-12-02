@@ -3,13 +3,13 @@ var auth = firebase.auth();
 //LOGIN
 auth.onAuthStateChanged(function(user) {
   if (user) {
-      $("#login").hide();
+      $("#autentication").hide();
       $("#user-state").show();
       $("#cpanel").show();
-      $('#alert').show();
-      $('#alert').html(user.email);
+      $('#user-login').show();
+      $('#user-login').html(user.email);
   } else {
-      $("#login").show();
+      $("#autentication").show();
       $("#user-state").hide();
   }
 });
@@ -19,13 +19,9 @@ function login() {
   var password = $("#passVal").val();
     auth.signInWithEmailAndPassword(email, password)
           .catch(function() {
-          $('#alert').html('<span style="color:red;">Incorrecto</span>');
+          $('#notification-top-bar').html('<span style="color:red;">Incorrecto</span>');
           $("#create-user").show();
   });
-}
-
-function showRegUser() {
-    $("#create-user").show();
 }
 
 function createUser() {

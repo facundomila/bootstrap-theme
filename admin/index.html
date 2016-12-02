@@ -31,37 +31,58 @@
     <script src="autenticacion.js"></script>
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div id="alert" style="background-color: #269abc;width: 100%; height: 45px"></div>
+<body id="myPage" class="body-clean-style">
 
-<div id="user-state" class="container text-center">
-    <button onclick="logout()">Cerrar sesion <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    </button>
+<div class="page-header">
+    <h2>Panel de control</h2>
+    <h3>Bienvenido al administrador de contenidos de <b>www.tu-sitio.com.ar</b></h3>
+    <div id="user-state" class="col-sm-3">
+        <div id="user-login"></div>
+        <button id="logout-button" class="btn btn-danger" onclick="logout()">Cerrar sesion</button>
+    </div>
 </div>
 
-<div id="login" class="container text-center">
-    <h1>Panel de control</h1>
-    <h4>Ingresa tu e-mail y contraseña para ingresar</h4>
-    <form class="form-inline">
-        <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
-        <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
-        <button type="button" class="btn btn-danger" onclick="showRegUser()">Crear Usuario</button>
-        <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
-    </form>
-</div>
-
-<div id="create-user" class="container text-center">
-    <h1>Registrate</h1>
-    <h4>Ingresa tu e-mail y contraseña para Registrate</h4>
-    <form class="form-inline">
-        <input id="newEmailVal" type="email" class="form-control" size="30" placeholder="Email" required>
-        <input id="newPassVal" type="password" class="form-control" size="30" placeholder="Password" required>
-        <button id="create-user" onclick="createUser()">Registrate</button>
-    </form>
+<div id="autentication" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    Ingresa tu email y tu contraseña para iniciar sesion como administrador
+                </div>
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
+                            <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
+                            <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        sdfkjshdkfjh
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    Ingrese una direccion de email y una contraseña para registrarse.
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
+                        <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
+                        <button type="button" class="btn btn-danger" onclick="showRegUser()">Crear Usuario</button>
+                        <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    sdfsdf
+                </div>
+            </div>
+        </div>
 </div>
 
 <div id="cpanel" class="container">
-     <h2>Panel de control</h2>
      <p>Modifica los campos que deseas atualizar. Para confirmar la operacion presiona el boton "Actualizar".</p>
         <hr>
         <form class="form-inline">
