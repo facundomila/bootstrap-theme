@@ -13,9 +13,20 @@ h3 {
     font-weight: 100;
     margin-top: 10px;
 }
+
+a:link {
+    color: #BE3305;
+    font-weight: 600;
+}
+a:hover {
+    color: #0B090E;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .body-clean-style {
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#075794), to(#00273B));
-    color: #FFFFFF;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#38393F), to(#1C2229));
+    color: #BF7107;
 }
 .jumbotron {
     background-color: #f4511e;
@@ -178,12 +189,21 @@ footer .glyphicon {
 
 #user-login {
     display: none;
-    padding-bottom: 15px;
+    color: #FFFFFF;
+    font-weight: 100;
+    padding: 0 5px;
 }
 #user-state {
     display: none;
+    padding: 15px;
+    width: 100%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: small;
 }
-
 #create-user, #cpanel, {
-display: none;
+    display: none;
+}
+#logout-button {
+
 }
