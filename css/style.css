@@ -15,18 +15,18 @@ h3 {
 }
 
 a:link {
-    color: #BE3305;
+    color: #AB1A25;
     font-weight: 600;
 }
 a:hover {
-    color: #0B090E;
+    color: #D97925;
     font-weight: 600;
     text-decoration: none;
 }
 
 .body-clean-style {
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#38393F), to(#1C2229));
-    color: #BF7107;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#013440), to(#002635));
+    color: #EFE7BE;
 }
 .jumbotron {
     background-color: #f4511e;
@@ -36,6 +36,14 @@ a:hover {
 }
 .container-fluid {
     padding: 50px 160px;
+    align-content: center;
+}
+.row {
+  padding-left: auto !important;
+  padding-right: auto !important;
+}
+.col-sm-5{
+    width: 46% !important;
 }
 .bg-grey {
     background-color: #f6f6f6;
@@ -78,31 +86,30 @@ a:hover {
 .item span {
     font-style: normal;
 }
+.page-header {
+    margin: 20px 0;
+}
 .panel {
-    border: 1px solid #f4511e;
-    border-radius:0 !important;
     transition: box-shadow 0.5s;
+    background: rgba(00, 00, 00, 0.2);
+    border: 0;
 }
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
 .panel-footer .btn:hover {
-    border: 1px solid #f4511e;
     background-color: #fff !important;
     color: #f4511e;
 }
 .panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    color: #002635 !important;
+    background: rgba(00, 00, 00, 0.2) !important;
+    padding: 20px;
+    border: 0;
 }
 .panel-footer {
-    background-color: white !important;
+    background: rgba(00, 00, 00, 0.2) !important;
+    border: 0;
 }
 .panel-footer h3 {
     font-size: 32px;
@@ -141,7 +148,7 @@ a:hover {
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4511e;
+    color: #AB1A25;
 }
 .slideanim {visibility:hidden;}
 .slide {
@@ -151,6 +158,21 @@ footer .glyphicon {
     -webkit-animation-duration: 1s;
     visibility: visible;
 }
+.panel-title {
+  width: 72%;
+  height: 80px;
+  color: #EFE7BE;
+  text-align: left;
+  float: left;
+}
+.panel-icon {
+  width: auto;
+  height: 80px;
+  color: #0e4556;
+  font-size: 4em;
+  text-align: right;
+}
+
 @keyframes slide {
     0% {
         opacity: 0;
@@ -161,6 +183,7 @@ footer .glyphicon {
         transform: translateY(0%);
     }
 }
+
 @-webkit-keyframes slide {
     0% {
         opacity: 0;
@@ -201,9 +224,12 @@ footer .glyphicon {
     text-transform: uppercase;
     font-size: small;
 }
-#create-user, #cpanel, {
+#create-user {
     display: none;
 }
-#logout-button {
-
+#cpanel {
+    display: none;
+}
+#notification-bar {
+  background-color: green;
 }

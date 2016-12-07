@@ -19,6 +19,17 @@ function populateSubtitle(GlossEntry) {
     $('#subtitle').val(GlossEntry.Abbrev);
 }
 
+function validUser() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        updateContent();
+    } else {
+        $('#notification-bar').html('<span style="color:red;">Incorrecto</span>');
+        $("#create-user").show();
+    }
+  });
+}
+
 function updateContent() {
     var title = $('#title').val();
     var subtitle = $('#subtitle').val();
@@ -26,5 +37,5 @@ function updateContent() {
     db.ref('title').set(title);
     db.ref('GlossEntry/Abbrev').set(subtitle);
 
-    $('#resultado').html('<span style="color:green;">Bien atualizado pipi</span>')
+    $('#notification-bar').html('<span style="color:green;">Bien atualizado pipi</span>')
 }

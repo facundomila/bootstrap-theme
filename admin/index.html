@@ -34,35 +34,40 @@
 <body id="myPage" class="body-clean-style">
 
 <div id="user-state">
-        <span style="color: #BF7107;font-weight: 600;">Usuario:<span id="user-login"></span>
+        <span style="color: #D97925;font-weight: 600;">Usuario:<span id="user-login"></span>
         <a href="#" id="logout-button" onclick="logout()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Salir</a></span>
 </div>
 <div class="page-header">
     <h2>Panel de control</h2>
-    <h3>Bienvenido al administrador de contenidos de <b>www.tu-sitio.com.ar</b></h3>
+    <h3>Bienvenido al administrador de contenidos de <a href="#">www.tu-sitio.com.ar</a></h3>
 </div>
-
+<div id="notification-bar"></div>
 <div id="autentication" class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 col-xs-12">
+        <div class="col-sm-5 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
-                    Ingresa tu email y tu contraseña para iniciar sesion como administrador
+                    <div class="panel-title">
+                      <p style="font-size: 1.3em">Inicia sesion</h2>
+                      <p style="font-size: 0.9em">Ingresa tu email y tu contraseña para iniciar sesion como administrador</p>
+                    </div>
+                    <div class="panel-icon">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
                 </div>
-                    <div class="panel-body">
-                        <form class="form-inline">
-                            <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
-                            <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
-                            <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
-                        </form>
-                    </div>
-                    <div class="panel-footer">
-                        sdfkjshdkfjh
-                    </div>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <input id="emailVal" type="email" class="form-control" size="30" placeholder="Email" required>
+                        <input id="passVal" type="password" class="form-control" size="30" placeholder="Password" required>
+                        <button type="button" class="btn btn-danger" onclick="login()">Ingresa</button>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    sdfkjshdkfjh
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-xs-12">
+        <div class="col-sm-5 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
                     Ingrese una direccion de email y una contraseña para registrarse.
@@ -80,10 +85,10 @@
                 </div>
             </div>
         </div>
+    </div>
 </div>
-
 <div id="cpanel" class="container">
-     <p>Modifica los campos que deseas atualizar. Para confirmar la operacion presiona el boton "Actualizar".</p>
+     <p>Modifica los campos que deseas actualizar. Para confirmar la operacion presiona el boton "Actualizar".</p>
         <hr>
         <form class="form-inline">
             <div class="row">
@@ -98,15 +103,15 @@
             </div>
             <hr>
             <div id="resultado"></div>
-            <button type="button" onclick="updateContent()" class="btn btn-danger">Actualizar</button>
+            <button type="button" onclick="validUser()" class="btn btn-danger">Actualizar</button>
         </form>
 </div>
 
 <footer class="container-fluid text-center">
-    <a href="#myPage" title="To Top">
+    <a href="#myPage">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
-    <p>Bienvenido al panel de control de <a href="" title="Visit w3schools">www.tu-sitio.com</a></p>
+    <p>Bienvenido al panel de control de <a href="#myPage">www.tu-sitio.com</a></p>
 </footer>
 
 <script src="firebase.js"></script>

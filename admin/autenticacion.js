@@ -1,6 +1,5 @@
 var auth = firebase.auth();
 
-//LOGIN
 auth.onAuthStateChanged(function(user) {
   if (user) {
       $("#autentication").hide();
@@ -19,8 +18,9 @@ function login() {
   var password = $("#passVal").val();
     auth.signInWithEmailAndPassword(email, password)
           .catch(function() {
-          $('#notification-top-bar').html('<span style="color:red;">Incorrecto</span>');
-          $("#create-user").show();
+          $('#notification-bar').html('<span style="color:red;">Incorrecto</span>');
+          location.reload();
+
   });
 }
 
@@ -29,17 +29,17 @@ function createUser() {
   var password = $("#newPassVal").val();
     auth.createUserWithEmailAndPassword(email, password)
         .catch(function() {
-          $('#alert').html("comela");
+          $('#notification-bar').html("comela");
 });
 }
 
 function logout() {
   firebase.auth().signOut().then(function() {
-      $('#alert').html("sesion cerrrada");
+      $('#notification-bar').html("sesion cerrrada");
       $("#cpanel").hide();
       $("#user-state").hide();
       $("#login").show();
 }, function(error) {
-      $('#alert').html("vuelva a intentarlo");
+      $('#notification-bar').html("vuelva a intentarlo");
 });
 }
