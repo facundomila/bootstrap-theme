@@ -23,7 +23,11 @@ a:hover {
     font-weight: 600;
     text-decoration: none;
 }
-
+.btn-danger {
+    width: 78%;
+    margin-top: 5px;
+    padding: 10px;
+}
 .body-clean-style {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#013440), to(#002635));
     color: #EFE7BE;
@@ -37,6 +41,10 @@ a:hover {
 .container-fluid {
     padding: 50px 160px;
     align-content: center;
+}
+.form-control {
+    margin: 5px;
+    padding: 20px;
 }
 .row {
   padding-left: auto !important;
@@ -106,6 +114,9 @@ a:hover {
     background: rgba(00, 00, 00, 0.2) !important;
     padding: 20px;
     border: 0;
+}
+.panel-body {
+    padding: 40px 0;
 }
 .panel-footer {
     background: rgba(00, 00, 00, 0.2) !important;
