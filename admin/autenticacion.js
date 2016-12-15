@@ -43,3 +43,39 @@ function logout() {
       $('#notification-bar').html("vuelva a intentarlo");
 });
 }
+
+$(document).ready(function() {
+    if (localStorage.chkbx && localStorage.chkbx != '') {
+        $('#remember_me').attr('checked', 'checked');
+        $('#emailVal').val(localStorage.usrname);
+        $('#passVal').val(localStorage.pass);
+    } else {
+        $('#remember_me').removeAttr('checked');
+        $('#emailVal').val('');
+        $('#passVal').val('');
+    }
+
+    $('#remember_me').click(function() {
+
+        if ($('#remember_me').is(':checked')) {
+            // save username and password
+            localStorage.usrname = $('#emailVal').val();
+            localStorage.pass = $('#passVal').val();
+            localStorage.chkbx = $('#remember_me').val();
+        } else {
+            localStorage.usrname = '';
+            localStorage.pass = '';
+            localStorage.chkbx = '';
+        }
+    });
+});
+
+function showSignupPanel() {
+    $("#login-panel").hide();
+    $("#signup-panel").fadeIn("slow");
+}
+
+function showLoginPanel() {
+    $("#login-panel").fadeIn("slow");
+    $("#signup-panel").hide();
+}
