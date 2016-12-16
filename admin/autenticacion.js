@@ -27,10 +27,15 @@ function login() {
 function createUser() {
   var email = $("#newEmailVal").val();
   var password = $("#newPassVal").val();
+  var comfirm = $("#comfirmPassVal").val();
+  if (comfirm == password) {
     auth.createUserWithEmailAndPassword(email, password)
         .catch(function() {
           $('#notification-bar').html("comela");
 });
+  } else {
+      $('#notification-bar').html("las contraseñas no coinciden");
+  }
 }
 
 function logout() {
