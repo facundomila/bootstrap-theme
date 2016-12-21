@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "database": {
     "rules": "database.rules.json"
   },
@@ -11,9 +10,5 @@
         "destination": "/index.html"
       }
     ]
-=======
-  "hosting": {
-    "public": "public"
->>>>>>> verification email & public files
   }
 }
